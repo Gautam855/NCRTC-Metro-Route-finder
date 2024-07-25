@@ -50,7 +50,7 @@ const totalstation = ref([]);
   // Method to find the route
   const findRoute = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/findRoute', {
+      const response = await axios.post('https://ncrtc-metro-route-finder-backend-api-2.onrender.com/findRoute', {
         source: source.value,
         destination: destination.value
       });
