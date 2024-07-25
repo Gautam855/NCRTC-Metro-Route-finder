@@ -2,12 +2,12 @@
   "name": "rrts",
   "version": "1.0.0",
   "description": "API to get RRTS Metro Routes",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index.js"
+        "start": "node server/index.js"
   },
-  "author": "Shivam Singh",
+  "author": "Gautam Verma",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
