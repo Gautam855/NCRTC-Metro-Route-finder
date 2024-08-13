@@ -5,12 +5,8 @@
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
     "start": "node index.js"
     
-=======
-        "start": "node server/index.js"
->>>>>>> 2d77da7964e0bb61be240de3c931532bdf75ea25
   },
   "author": "Gautam Verma",
   "license": "ISC",

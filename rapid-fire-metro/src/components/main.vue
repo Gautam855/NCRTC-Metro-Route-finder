@@ -1,8 +1,10 @@
 <template>
-    <div class="main">
-      <div class="content-items">
-        <video :src="rrtsbgv" autoplay loop muted disablePictureInPicture></video>
-      </div>
+  <div class="wrapper">
+  <div class="content-items">
+    <video :src="rrtsbgv" autoplay loop muted disablePictureInPicture></video>
+  </div>  
+  <div class="main">
+      
 
       <div id="scroll-text">
         Time shown is estimated travel time only, Passengers are advised to keep extra time to travel.
@@ -34,6 +36,7 @@
         </div>
       </div>
     </div>
+  </div>
   </template>
   
   <script setup>
@@ -77,8 +80,14 @@ const totalstation = ref([]);
   
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:wght@300&display=swap");
-
-
+*{
+  overflow: hidden;
+}
+.wrapper{
+  width: 100vw;
+  height:calc(100vh - 75px);
+  overflow: hidden;
+}
 .but{
     margin: 20px 0px;
     width: 100%;
@@ -95,6 +104,7 @@ const totalstation = ref([]);
     color:red;  
     transform: translateX(100%);
     animation: my-animation 25s linear infinite;
+    z-index: 20;
 }
 
 @keyframes my-animation {
@@ -107,11 +117,11 @@ const totalstation = ref([]);
 }
 
 .main{
-    position: fixed;
+    position: relative;
  left: 0;
  top: 0;
- width: 100vw;
- height: 100vh;
+ width: 100%;
+ height: 100%;
 }
 
 .ro{
@@ -120,9 +130,11 @@ overflow: auto;
 }
 .content-items {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 75px);
     position: absolute;
+    z-index: 1;
 }
+
 
 .content-items video {
     width: 100%;
@@ -132,15 +144,19 @@ overflow: auto;
 
 .container {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(47,79,173,0.76234243697479) 21%, rgba(0,212,255,1) 100%);
     border: 10px solid rgba(255, 255, 255, 0.572);
     border-radius: 50px;
     padding: 1% 4% 0% 4%;
-    margin: 0rem 2rem 5rem 23rem;
     text-align: center;
     color: white;
     margin-bottom: 100px;
+    background-color: aqua;
+    z-index: 2;
 }
 
 .search-box {
@@ -214,7 +230,11 @@ overflow: auto;
     background:grey;
   }
 
- 
+  @media screen and (min-width: 480px){
+
+
+  
+ }
 
 
 
